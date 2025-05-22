@@ -1,0 +1,2 @@
+1. Use range - we don't need to control index manually
+2. It's important to check that index exists in both words before using it
