@@ -5,7 +5,7 @@ def is_greatest_after_extra(candies: list[int], extra_candies: int) -> list[bool
     max_candies = max(candies)
     result = []
     for candy in candies:
-        if candy + extra_candies >= max_candies:
+        if candy + extra_candies >= max_candies:  # don't forget that if equals max - also add True
             result.append(True)
         else:
             result.append(False)
