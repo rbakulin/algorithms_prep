@@ -1,0 +1,6 @@
+1. This problem is all about corner cases
+2. Think of what if n == 0
+3. You don't have to check anything if n is too big for given flowerbed
+4. What if flowerbed consists only of 1 or 2 elements (the behaviour is the same)
+5. You need to check element's nearest neighbors but remember of first and last element
+6. Remember that if you change n in the last iteration you need to if n is 0 separately
