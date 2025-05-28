@@ -1,0 +1,6 @@
+1. At first sight, we need only 1 index, but remember, that we need to get rid of both leading and trailing spaces -
+that's why we're going to need 2 indexes
+2. Pay special attention that we're adding chars to a new array: we're adding every of them, including the starting char
+3. I prefer going from the ending to the begging of they original string - it seems more intuitive for reversing
+4. But it's important to remember, that the words must not be added in reverse order, e.g.
+we're reversing each word once again before adding to the array
