@@ -1,0 +1,6 @@
+1. A set is the fastest type for a char checking
+2. We're given a string - it's immutable! However, it's easy to make a list from it
+3. We need to change 2 chars - 2 pointers fits well for it
+4. We need to iterate through the array till we meet 2 vowels
+5. DO NOT FORGET: IF WE FOUND 2 VOWELS - WE STILL NEED TO ITERATE FURTHER TO AVOID INFINITE CYCLE
+6. Don't forget to convert the list to back a string before returning it
