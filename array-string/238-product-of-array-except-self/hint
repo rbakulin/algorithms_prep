@@ -1,0 +1,3 @@
+1. To avoid O(n^2) complexity we need to calculate and store prefix and suffix products
+2. FOLLOW UP: we can use the result array as a store for prefix products, and then just multiply each value
+to each iteration's suffix prod (if it's stored in iterative updated var)
