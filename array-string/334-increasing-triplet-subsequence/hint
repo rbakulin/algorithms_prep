@@ -1,0 +1,11 @@
+1. At first, it seems like there's simple solution: just iterate through the array and count increasing values
+2. However, it's wrong: if you've got something like [1, 4, 2, 3] you would try to count 1 and 4, wouldn't find
+the third and return False
+3. So, we need to store the first 2 elements of triplet in separate vars: first and second.
+CAUTION: MAKE DEFAULT VALUES ARE INF -> any number from the array will be less
+4. Now when we go through the array, we compare each element with first and second. If current element is less than
+first -> it will be the new first, if no - it's the candidate for second.
+5. If current value is greater than first and second -> that's it, we found the triplet!
+6. The fact that we going through the array from left to right already ensures, that i < j < k (even if the new value
+is smaller then first and we change first with the smaller one, we still have second, that is still greater then
+both of them).
