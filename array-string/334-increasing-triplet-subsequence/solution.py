@@ -22,7 +22,7 @@ def is_there_triplet(nums: list[int]) -> bool:
     return False
 
 
-class TestGetProductExceptI(unittest.TestCase):
+class TestIsThereTriplet(unittest.TestCase):
     def test_true_simple(self):
         self.assertEqual(is_there_triplet([1, 2, 3, 4, 5]), True)
 

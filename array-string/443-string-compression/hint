@@ -1,0 +1,18 @@
+1. We need to go through the array and check every char: if it's single - just store it (NO COUNTER 1, IT'S IMPORTANT),
+if it's multiple - count and store it with counter
+2. DO NOT BE CONFUSED BY THE INDEX MOVEMENT - it's very simple. When we count the repentance of a char, we should just
+also move the index -> after we stored the char with counter we already have the correct index (IT'S ON THE CLOSEST
+DIFFERENT CHARACTER). IT MEANS THAT WE INCREASE THE INDEX ONLY IN THE INSIDE WHILE, NOT IN THE OUTSIDE ONE.
+3. If you want to clear the list, remember that chars = [] will just reassign the var to the new empty array -> input
+array won't be affected
+
+FOLLOW UP:
+1. We need separate write index to store the result in the original array
+2. STORING THE CHARS IN THE INPUT ARRAY INSTEAD OF SEPARATE STRING: at first sight it seems dangerous, but in our case
+the write index will always be smaller or equal to our main index, because compressed string can not be bigger than
+uncompressed.
+3. LEFTOVERS: in such type tasks common practice is to ignore leftovers, e.g. if the function returns correct compressed
+string's length, the content of the input array checked only till that value (used as slice index).
+4. Because original array now is compressed + leftovers it's very important to return the correct length. We can use our
+write index - we increased it only when added a compressed char
+
