@@ -7,7 +7,7 @@ DIFFERENT CHARACTER). IT MEANS THAT WE INCREASE THE INDEX ONLY IN THE INSIDE WHI
 array won't be affected
 
 FOLLOW UP:
-1. We need separate write index to store the result in the original array
+1. We need separate write index to store the result in the original array (SO IT'S TWO POINTERS PATTERN)
 2. STORING THE CHARS IN THE INPUT ARRAY INSTEAD OF SEPARATE STRING: at first sight it seems dangerous, but in our case
 the write index will always be smaller or equal to our main index, because compressed string can not be bigger than
 uncompressed.

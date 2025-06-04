@@ -1,0 +1,5 @@
+1. The trick is IT'S MUCH EASIER TO MOVE NON-ZEROS THAN ZEROS, because we don't need to keep track the order of zeros.
+We can move non-zeros to the beginning, keeping their order, and fill the rest of the array with zeros.
+2. We need NO nested loops: one pointer for writing, that increasing only after a new char was written, and one pointer
+for going through the array and checking if EACH value is non-zero.
+3. DO NOT FORGET, that we need a second separate loop to change all the values after the last written non-zeros with zeros
