@@ -1,0 +1,6 @@
+1. In general this is a task for finding max square: the distance between values is A-side, MINIMAL value is B-side
+2. KEY MECHANIC FOR SOLVING: we use two pointers and each step move only pointer with the LOWEST value.
+We took maximum A-side, when we made i = 0, j = len(array) - 1. Now we need to find a bigger value that can compensate
+the shrinking of A-side. Considering, that the square depends on the LOWER of two sides (by the problem's condition),
+moving the index of the bigger value is useless (square will still be calculated by the current smaller value). However,
+moving the lower's value index gives us a chance to get a bigger square despite the fact, that the distance will get smaller.
