@@ -1,0 +1,7 @@
+1. Logic is simple: one pointer for the substring (move only after found it in the string), one pointer for the string
+(move it to check each char).
+2. Because our main loop is through the string and we increase this index unconditionally (unlike substring index),
+we can use range to avoid manually controlling it
+3. Amount of matched chars are the same as chars in the substring (s) -> return true. The string is finished, but we
+still didn't pass the whole substring -> return false
+4. Don't forget about corner case, when substring is empty! In this case it is a valid substring for any string
