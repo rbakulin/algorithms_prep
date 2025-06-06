@@ -1,0 +1,13 @@
+HASH MAP SOLUTION O(n):
+1. We can use a dict to store each number and it's frequency, that we've seen, except for those, that have been used to
+make a pair (the need to be removed from the array according to problem's condition)
+2. REMEMBER that by problem's condition there CAN NOT be numbers lower that 1 in the array -> there can not be be
+numbers lower that 1 in the hashmap "seen" -> we can you simple condition "if seen.get(n, 0)"
+3. We can just calc the diff between k and current n in look this diff in our hashmap
+4. DON'T FORGET to decrease frequency fo each num in "seen", if we use it in par AND count pair in a separate var
+
+
+TWO POINTERS SOLUTION O(n log n):
+1. The algorith is trivial: sort array, check if sum is greater, smaller or equal then shift pointers accordingly
+2. Core mechanic: after sorting, if nums[0] + nums[j] > k for all j, then nums[1] + nums[j] > k too, and
+the logic applies symmetrically from the right side

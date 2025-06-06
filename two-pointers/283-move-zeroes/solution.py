@@ -20,7 +20,7 @@ def move_zeros(nums: list[int]) -> None:
         j += 1
 
 
-class MoveZeros(unittest.TestCase):
+class TestMoveZeros(unittest.TestCase):
     def test_many_nums(self):
         array = [0, 1, 0, 3, 12]
         move_zeros(array)

@@ -18,7 +18,7 @@ def get_max_square(height: list[int]) -> int:
     return max_square
 
 
-class MoveZeros(unittest.TestCase):
+class TestGetMaxSquare(unittest.TestCase):
     def test_many_nums(self):
         self.assertEqual(get_max_square([1, 8, 6, 2, 5, 4, 8, 3, 7]), 49)
 
