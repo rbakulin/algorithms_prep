@@ -1,0 +1,4 @@
+1. Classical sliding window problem - easy indeed.
+2. To easily update window sum in a loop we have compute the initial value (from i to j exclusive) BEFORE the loop
+3. In the loop we just add j-index val, count avg and exclude i-index val
+4. DON'T FORGET TO SET THE INITIAL VAL OF MAX SUM TO -INF (NOT TO 0!) TO UPDATE MAXIMUM NEGATIVE SUM CORRECTLY
