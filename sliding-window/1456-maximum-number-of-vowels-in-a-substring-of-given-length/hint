@@ -1,0 +1,5 @@
+1. Same sliding window pattern: make a window (one char shorter than k), count vowels. Then add last window char ->
+check if it's a vowel -> check if it's max vowels -> remove first char from the window -> if it's a vowel, decrease the
+vowels count
+2. Repeat till the window's border reaches the end of the given string
+3. PROFIT
