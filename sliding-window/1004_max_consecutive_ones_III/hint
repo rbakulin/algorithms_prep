@@ -1,0 +1,4 @@
+1. Basically, algorithm is: we don't know the window size, so we start with both i and j at 0. Then we move j forward
+till we meet more 0 then it was given at k. Inside of this loop each time we check, how many 0 we met. If it\s too many,
+we move i till we get red of one 0 from our window.
+2. DO NOT FORGET TO CHECK IF THE WINDOW SIZE IS MAX EVERY TIME AFTER OUR WINDOW IS VALID (after moving i basically)
