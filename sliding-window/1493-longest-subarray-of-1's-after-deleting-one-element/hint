@@ -1,0 +1,2 @@
+1. The algorithm is exactly the same, as it was in the task 1004, but with 2 minor changes: only one char to "skip"
+instead of k variable AND this char must NOT be counted in the final answer (whether it's 0 or 1)
