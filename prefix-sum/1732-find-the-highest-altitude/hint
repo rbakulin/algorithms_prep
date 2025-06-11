@@ -1,0 +1,2 @@
+1. Trivial task, algorithm is literally to add every value and check if it's the maximum
+2. The only trick is THE DEFAULT VALUE (0) is ALSO considered one of the altitudes, e.g. max altitude can't be < 0
