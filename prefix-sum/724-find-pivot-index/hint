@@ -1,0 +1,6 @@
+1. Classical prefix sum problem, but it requires attention if a few small details
+2. Create prefix and suffix sum arrays and FILL THEM WITH NONES to be able to work with their indexes
+3. When you're filling the suffix sum array, don't forget to go BACKWARDS!
+4. Pay attention, that if you didn't find pivot index, you need to return -1 (not 0!)
+5. DON'T FORGET TO RETURN THE FIRST PIVOT INDEX, THAT YOU'VE MET! According to task's condition, you have to return
+the leftmost pivot index you found, but if you forget to break the cycle, you would rewrite the answer if there are many
