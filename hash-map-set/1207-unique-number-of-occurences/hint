@@ -1,0 +1,4 @@
+1. Fairly easy task, however there's room for mistakes:
+A. In a DICT of popularity remember to use get() func to avoid KEY ERROR when you add a value for the first time
+B. To check if all values in the dict are UNIQUE, we can just compare LENGTHS of dict.keys() and dict.keys() CONVERTED
+TO A SET (NO EXTRA CONVERSIONS needed, NEITHER comparing each key)
