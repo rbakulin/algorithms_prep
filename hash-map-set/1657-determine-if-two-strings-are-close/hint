@@ -1,0 +1,7 @@
+1. This task is just a trick: those strangely described conditions look like that for a reason
+2. You don't need to do manually those 2 operations to check, if conditions are satisfied
+3. Basically, we need to check 2 things:
+a. Both words consist of the same set of chars
+b. Values of frequency are the same (doesn't matter, that they could be for different chars inside of our set)
+4. Using 2 dicts -> comparing sets of the keys -> comparing sorted lists of values
+5. DON'T FORGET to use sorted(), NOT sort() (it returns None)
