@@ -1,0 +1,6 @@
+1. There's no better solution than bruteforce, but we can optimize comparing lines (from O(n^3) to O(n^2) using dict
+for keeping lines instead of list
+2. When we use dict, we need to convert line lists to immutable type - tuple
+3. Also, it's very important to count multiple identical rows correctly:
+A. instead of keeping each formed vertical line in a dict, we check EACH of it in the horizontal dict
+B. when we count intersections, we're adding all horizontal line to our counter (+= dict[tuple(formed_column)], NOT +=1)
