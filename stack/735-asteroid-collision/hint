@@ -1,0 +1,9 @@
+1. This problem looks more difficult than it is
+2. We use stack for keeping asteroids
+3. We're going through EVERY asteroid and we check if we must start simulating collision for every element
+4. The conditions for starting simulating collision are simple:
+a. current asteroid is negative (moving left)
+b. there's something to collide with (the stack is not empty)
+c. asteroid, that collides (last in the stack) with the current asteroid is positive (moving right)
+5. Using break for NOT saving current asteroid in the stack
+6. If the current asteroid doesn't fall for simulating conditions -> we're simply saving it in the stack
