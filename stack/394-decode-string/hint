@@ -1,0 +1,12 @@
+1. This task looks very difficult at first sight, but it's classical medium problem in reality
+2. The algorithm is quite simple: we put in the stack every char till we meet "]". It's VERY IMPORTANT, that we starting
+decoding after meeting CLOSING bracket NOT the OPENING one
+3. After meeting it, we're forming decoded string: start poping the last element of the stack and put it in the decoded
+string till we meet OPENING bracket "["
+4. Then we pop the OPENING bracket (but not add it to the decoded string, ofc) from the stack and start forming
+multiplier (how many time we shell repeat the decoded string) - poping the last element of the stack till it's a digit
+5. There's MUST be multiplier before the opening bracket - it's guaranteed by the task's description
+6. Then we repeat the decoded string as many times, as multiplier says and add it back to the stack (instead of coded
+chars, that we poped in previous steps) CHAR BY CHAR
+7. IT'S VERY IMPORTANT NOT TO FORGET to REVERSE the digits in the multiplier (and convert it to int) and chars in the
+decoded string, because both of them were formed by poping the LAST element of the stack
