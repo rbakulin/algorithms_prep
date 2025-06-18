@@ -1,0 +1,5 @@
+1. This problem just articulate poorly - in reality we need to just write a function, that:
+a. takes an int (request time in milliseconds)
+b. this int is considered a request
+c. we need to add this request to the array of requests, the array stored in the instance (initialized in a constructor)
+d. then just return the COUNT of the requests which time in the interval: last request's time - 3000

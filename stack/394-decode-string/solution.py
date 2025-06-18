@@ -24,14 +24,14 @@ def decode_string(s: str) -> str:
 
 
 class TestDecodeString(unittest.TestCase):
-    # def test_multiplier(self):
-    #     self.assertEqual(decode_string(s="3[a]2[bc]"), "aaabcbc")
+    def test_multiplier(self):
+        self.assertEqual(decode_string(s="3[a]2[bc]"), "aaabcbc")
 
     def test_nested_multiplier(self):
         self.assertEqual(decode_string(s="3[a2[c]]"), "accaccacc")
 
-    # def test_multiplier_with_suffix(self):
-    #     self.assertEqual(decode_string(s="2[abc]3[cd]ef"), "abcabccdcdcdef")
+    def test_multiplier_with_suffix(self):
+        self.assertEqual(decode_string(s="2[abc]3[cd]ef"), "abcabccdcdcdef")
 
 
 if __name__ == "__main__":
