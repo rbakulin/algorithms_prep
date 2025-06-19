@@ -9,3 +9,20 @@ b. poping first elements of both and compare: which index is smaller - wins (blo
 c. the winner is appended back to his queue, but with + n to his orginal index
 (so he moves AFTER anyone, who didn't have a turn yet)
 d. when one of the queues is empty - it's time to stop and declare the opposite team a winner
+3. Why 2 queues? With 1 queue we would need:
+a. to store BOTH member's team AND index: [(team, i)]
+b. a structure to keep track is current member is blocked: banned = {'R': 0, 'D': 0}
+c. a structure for checking if both teams are still in the game: remaining = {'R': senate.count('R'), 'D': senate.count('D')}
+The 1 queue solution would look like this:
+    while remaining['R'] > 0 and remaining['D'] > 0:
+        party, idx = queue.pop(0)
+        opponent = 'D' if party == 'R' else 'R'
+        if banned[party] > 0:
+            banned[party] -= 1
+            remaining[party] -= 1
+        else:
+            banned[opponent] += 1
+            queue.append((party, idx + n))
+    return "Radiant" if remaining['R'] > 0 else "Dire"
+Which is much more difficult to read and error prone
+

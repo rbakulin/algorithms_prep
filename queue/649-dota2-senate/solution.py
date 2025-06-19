@@ -2,25 +2,25 @@ import unittest
 
 
 def get_winner_party(senate: str) -> str:
-    radient_indexes = []
+    radiant_indexes = []
     dire_indexes = []
     n = len(senate)
     for i in range(n):
         if senate[i] == "R":
-            radient_indexes.append(i)
+            radiant_indexes.append(i)
         else:
             dire_indexes.append(i)
-    while radient_indexes and dire_indexes:
-        first_radient_index = radient_indexes.pop(0)
+    while radiant_indexes and dire_indexes:
+        first_radient_index = radiant_indexes.pop(0)
         first_dire_index = dire_indexes.pop(0)
         if first_radient_index < first_dire_index:  # REMEMBER: the smaller index wins
             # VERY IMPORTANT: the senator gets another turn ONLY AFTER all the rest senators make their move!
             # we add n to the senator's index (before readding it), so he moves AFTER anyone, who didn't have a turn yet
             # n.b. it can be any CONSTANT value bigger than n, but we use n to make sure it's not smaller
-            radient_indexes.append(first_radient_index + n)
+            radiant_indexes.append(first_radient_index + n)
         else:
             dire_indexes.append(first_dire_index + n)
-    return "Radiant" if radient_indexes else "Dire"
+    return "Radiant" if radiant_indexes else "Dire"
 
 
 class TestGetWinnerParty(unittest.TestCase):
