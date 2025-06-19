@@ -1,0 +1,11 @@
+1. To solve this problem, we have to define the structures and simulate their interaction:
+a. structure for storing members of the senate: their team and their order (the order affects who acts after who)
+b. simulate they trying to block the closest member of the opposite team
+c. simulate the rounds (when every member, who isn't block, had his turn - the round ends, after that a new round starts)
+d. condition for stopping the game and declaring a winner
+2. Solution:
+a. using 2 queues to store indexes of members of each team
+b. poping first elements of both and compare: which index is smaller - wins (blocks the member of the opposite team)
+c. the winner is appended back to his queue, but with + n to his orginal index
+(so he moves AFTER anyone, who didn't have a turn yet)
+d. when one of the queues is empty - it's time to stop and declare the opposite team a winner
