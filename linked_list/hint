@@ -1,0 +1,11 @@
+1. The simplest solution is just to count ALL elements, calculate the MIDDLE INDEX, get to te element right BEFORE the
+middle one and change the next link of it TO THE ONE, THAT GOES AFTER the middle one
+2. However, it takes 2 traverses through the list -> O(2n)
+3. So, the better option is using FAST-SLOW-INDEXES solution:
+a. one index moves 1 step a time
+b. the other - 2 steps a time
+c. the var for tracing the nodes BEFORE the slow index - just to skip middle node at the end
+d. when the fast one gets to the end -> the slow one indexes exactly at the middle element
+e. after that just link the node from PREVIOUS node to the one that goes AFTER the MIDDLE ONE
+4. VERY IMPORTANT: in both of these cases we need to check if the input LinkedList consists of only 1 element, if so -
+just return None (equivalent of empty LinkedList)
