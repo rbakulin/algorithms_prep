@@ -1,0 +1,6 @@
+1. The first thing: you need to group odd INDEXES after the even ones, NOT the odd VALUES
+2. The only way to connect the LAST EVEN index to the FIRST ODD is to store THE FIRST ODD node at the separate var AT
+THE BEGINNING
+3. We can handle the cases when there are no nodes at all (return None) and only 1 or 2 nodes (no need to group anything)
+from the beginning
+4. The further algorithm is simple: go through every 3 nodes and change next value till you traverse all the nodes
