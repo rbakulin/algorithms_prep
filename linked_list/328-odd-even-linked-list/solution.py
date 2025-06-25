@@ -4,7 +4,7 @@ from typing import Optional
 from ..helpers import LinkedList, list_to_linkedlist, linkedlist_to_list
 
 
-def group_odd_indexes_after_even(head: LinkedList) -> Optional[LinkedList]:
+def group_odd_indexes_after_even(head: Optional[LinkedList]) -> Optional[LinkedList]:
     """
     [1, 2, 3, 4, 5] -> [1, 3, 5, 2, 4] || [3, 2, 1] -> [3, 1, 2]
     0. 1 -> 3; 2 -> 4
@@ -24,7 +24,6 @@ def group_odd_indexes_after_even(head: LinkedList) -> Optional[LinkedList]:
         next_even = odd.next if odd else None
     even.next = first_odd
     return head
-
 
 
 class TestGroupEvenIndexesAfterOdd(unittest.TestCase):

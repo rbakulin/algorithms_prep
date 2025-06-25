@@ -1,0 +1,7 @@
+1. Just traverse the linked list and change "next" link to the previous node, but there are some aspects to remember:
+a. it's better to handle corner cases first: empty linkedlist and 1 element linkedlist
+b. don't forget to set None as new "next" of a head of the linkedlist
+c. VERY IMPORTANT: while traversing, we need to save an ORIGINAL "NEXT" link of each node before reversing it
+d. after changing "next" link to the previous node, we use ORIGINAL "NEXT" to traverse the linkedlist
+e. DO NOT FORGET: at the end we're returning NOT the OLD head (it's now the last node), but the NEW head (the var, which
+we used to traverse the linked list - for instance, "current_node")
