@@ -1,0 +1,4 @@
+1. Easy task, if you're ok with O(n) space complexity (I am)
+2. Add all nodes to a list to work with their indexes (remember to add .val, NOT the node itself!)
+3. Default max sum is -INF to work correctly with negatives
+4. Standard pair-based addition, starting from the end of the array
