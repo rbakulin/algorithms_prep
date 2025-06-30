@@ -1,7 +1,4 @@
 # Definition for a binary tree node.
-from typing import Optional
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -9,27 +6,23 @@ class TreeNode:
         self.right = right
 
 
-def list_to_tree(list_nodes: list[int]) -> Optional[TreeNode]:  # TODO: change with "| None"
-    if not list_nodes:
+def list_to_tree(nodes: list[int] | None) -> TreeNode | None:
+    """
+    nodes = [3,9,20,11,14,15,7] == [root=3, roots_children=(9,20), 9s_children=(11,14), 20s_children(15,7)]
+    """
+    if not nodes:
         return None
-
-    root = TreeNode(list_nodes[0])
-    queue = [root]
-    i = 1  # points to next value in list_nodes
-
-    while queue and i < len(list_nodes):
-        current = queue.pop(0)
-
-        # Left child
-        if i < len(list_nodes) and list_nodes[i] is not None:
-            current.left = TreeNode(list_nodes[i])
-            queue.append(current.left)
-        i += 1
-
-        # Right child
-        if i < len(list_nodes) and list_nodes[i] is not None:
-            current.right = TreeNode(list_nodes[i])
-            queue.append(current.right)
-        i += 1
-
+    tree_objects = [TreeNode(node) if node is not None else None for node in nodes]
+    root = tree_objects[0]
+    parent_index = 0
+    child_index = 1
+    while child_index < len(tree_objects):
+        parent = tree_objects[parent_index]
+        parent_index += 1
+        if parent is None:
+            continue
+        parent.left = tree_objects[child_index]
+        child_index += 1
+        parent.right = tree_objects[child_index]
+        child_index += 1
     return root

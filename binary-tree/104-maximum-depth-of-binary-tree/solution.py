@@ -5,11 +5,21 @@ from ..helpers import TreeNode, list_to_tree
 
 
 def get_max_depth(head: Optional[TreeNode]) -> int:
-    if not head:
+    """
+    [3, 9, 20, None, None, 15, 7]
+       3
+      / \
+     9  20
+       /  \
+      15   7
+
+    """
+    if head is None:
         return 0
-    left_depth = get_max_depth(head.left)
-    right_depth = get_max_depth(head.right)
-    return 1 + max(left_depth, right_depth)
+    else:
+        left = get_max_depth(head.left)
+        right = get_max_depth(head.right)
+        return max(left, right) + 1
 
 
 class TestGetMaxDepth(unittest.TestCase):
