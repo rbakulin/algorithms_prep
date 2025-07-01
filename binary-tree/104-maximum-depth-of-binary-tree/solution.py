@@ -1,24 +1,43 @@
 import unittest
-from typing import Optional
 
 from ..helpers import TreeNode, list_to_tree
 
 
-def get_max_depth(head: Optional[TreeNode]) -> int:
+def get_max_depth(root: TreeNode | None) -> int:
     """
     [3, 9, 20, None, None, 15, 7]
+
        3
       / \
      9  20
        /  \
       15   7
 
+    get_max_depth(3)
+    │
+    ├── left = get_max_depth(9) → returns 1
+    │   ├── left = get_max_depth(None) → returns 0
+    │   └── right = get_max_depth(None) → returns 0
+    │   max(0, 0) + 1 = 1
+    │
+    └── right = get_max_depth(20) → returns 2
+        ├── left = get_max_depth(15) → returns 1
+        │   ├── left = get_max_depth(None) → returns 0
+        │   └── right = get_max_depth(None) → returns 0
+        │   max(0, 0) + 1 = 1
+        │
+        └── right = get_max_depth(7) → returns 1
+            ├── left = get_max_depth(None) → returns 0
+            └── right = get_max_depth(None) → returns 0
+            max(0, 0) + 1 = 1
+        max(1, 1) + 1 = 2
+    max(1, 2) + 1 = 3
     """
-    if head is None:
+    if root is None:
         return 0
     else:
-        left = get_max_depth(head.left)
-        right = get_max_depth(head.right)
+        left = get_max_depth(root.left)
+        right = get_max_depth(root.right)
         return max(left, right) + 1
 
 
