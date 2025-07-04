@@ -1,0 +1,8 @@
+1. Because of the recursive nature of a binary tree (each node (except for a root) is both a parent and a child),
+recursion is the most convenient way to traverse it
+2. The key for understanding of this solution is to understand how the CALL STACK works during recursion:
+a. we first go as far LEFT as possible recursively, until we meet None
+b. then we return BACK up ONE level, and explore the corresponding RIGHT subtree
+c. this continues UP the tree, finishing each node ONLY after BOTH its subtrees were processed
+E.G. WHEN WE FOUND THE DEPTH OF THE LEFTEST BRUNCH, WE GO BACK TO THE NEAREST PARENT AND CHECK ITS RIGHT SUBTREE,
+CONTINUING EVALUATING THE MOST RECENT RECURSIVE CALL

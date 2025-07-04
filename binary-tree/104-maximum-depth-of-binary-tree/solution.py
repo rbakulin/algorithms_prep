@@ -34,11 +34,11 @@ def get_max_depth(root: TreeNode | None) -> int:
     max(1, 2) + 1 = 3
     """
     if root is None:
-        return 0
+        return 0  # reached the end of a path (no node here), return 0 because None doesn't contribute to depth
     else:
         left = get_max_depth(root.left)
         right = get_max_depth(root.right)
-        return max(left, right) + 1
+        return max(left, right) + 1  # take the larger depth between left and right, then add 1 for the current node
 
 
 class TestGetMaxDepth(unittest.TestCase):
