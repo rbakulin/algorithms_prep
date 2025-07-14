@@ -1,0 +1,4 @@
+1. To store all leafs in one array we need to create a separate recursive function - it'll take the storing list as the
+second argument
+2. The func for finding all leafs is simple: go from the root -> does this node have children? -> yes? call the func for
+each child -> no? we found a leaf - add it to the storing list and RETURN (helps to avoid further checking for this node)
