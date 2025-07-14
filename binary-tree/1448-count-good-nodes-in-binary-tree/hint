@@ -1,0 +1,6 @@
+1. ATTENTION! The root node si also considered as good node
+2. The algorithm is pretty much the same usual DFS (Depth First Search): go to the left in each subtree till the leaf ->
+go 1 lvl up -> try to go to the right subtree
+3. But we need to count the good nodes - the easiest way is to put all them in the array and return its length in the end
+4. So to pass the string array from one call to another we need to mace a separate function, that takes 3 arguments:
+node to check, the maximum val on the path to the node to check and the array to store all the good nodes
